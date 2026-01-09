@@ -30,3 +30,44 @@
     font-size: 14px;
     font-weight: 700;
 }
+
+@media screen and (min-width: 1024px) {
+    .topicos {
+        padding: 2.5em 2em 2em 2em;
+    }
+
+    .topicos__titulo {
+        font-size: 24px;
+    }
+
+    .topicos__link {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .topicos {
+        padding: 3em 30vw;
+    }
+
+    .topicos__titulo {
+        font-size: 32px;
+    }
+
+    .topicos__item:hover {
+        background: var(--cor-link);
+        transition: 0.3s;
+    }
+
+    .topicos__link:hover {
+        color: var(--cor-texto-destaque);
+        transition: 0.2s;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .lista-rodape {
+        border-left: 1px solid var(--cinza-claro);
+        padding-left: 1em;
+    }
+}

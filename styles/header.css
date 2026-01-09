@@ -15,6 +15,14 @@
     display: inline-block;
 }
 
+.container__botao:checked ~ .container__label > .cabecalho__menu-hamburguer {
+    background-image: url(../img/Menu\ Aberto.svg);
+}
+
+.container__botao:checked ~ .container__label {
+    background: var(--cor-link);
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -55,4 +63,115 @@
     color: var(--cor-link);
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.container__titulo {
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    .container__titulo {
+        display: block;
+        padding: 0.2em 0 0 0.2em;
+        font-family: var(--cor-secundaria);
+        font-size: 30px;
+        color: var(--preto-padrao);
+    }
+
+    .container__titulo-negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+    .opcoes__botao:checked ~ .opcoes__label > .opcoes__item {
+        background: var(--cor-link);
+        color: var(--cor-texto-destaque);
+    }
+
+    .opcoes__item {
+        text-transform: uppercase;
+        color: var(--preto-padrao);
+        padding: 2em 1em;
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--preto-padrao);
+    }
+
+    .container__imagem-transparente {
+        display: none;
+    }
+
+    .opcoes__botao {
+        display: none;
+    }
+
+    .opcoes__botao:checked ~ .lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .container__link:hover > .container__texto {
+        color: var(--cor-texto-destaque);
+    }
+
+    .container__link:active > .container__texto  {
+        color: var(--azul-padrao);
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .cabecalho {
+        padding: 0.5em 2em;
+    }
+
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .container__titulo {
+        margin-right: 2em;
+    }
+
+    .container__texto {
+        display: block;
+        color: var(--preto-padrao);
+        font-size: 18px;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }
+
+    .opcoes__item, .lista-menu__item {
+        cursor: pointer;
+    }
+
+    .opcoes__item:hover, .opcoes__link:hover, .lista-menu__item:hover{
+        color: var(--cor-texto-destaque);
+        transition: 0.2s;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--cor-link);
+        transition: 0.2s;
+    }
 }
